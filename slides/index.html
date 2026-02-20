@@ -1,41 +1,442 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section data-visibility="hidden">Slide X</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/beige.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+	<style>
+		.slides ul {
+			font-size: 0.8em;
+		}
+
+		.slides p {
+			font-size: 0.8em;
+		}
+
+		.slides ol {
+			font-size: 0.8em;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- Slide 1: Title -->
+			<section data-background-gradient="linear-gradient(135deg, #0f172a, #1e293b)">
+				<div style="text-align:center; max-width:900px; margin:auto;">
+
+					<h2 style="color:#38bdf8; font-weight:700; margin-bottom:20px;">
+						Real-Time Construction Pollution Monitoring
+					</h2>
+
+					<p style="line-height:1.5; color:#e2e8f0;">
+						Construction sites in Delhi–NCR lack real-time, site-specific pollution monitoring,
+						resulting in unchecked dust emissions and weak enforcement.
+					</p>
+
+					<p style="font-size:1.4em; color:#fbbf24; font-weight:600;">
+						AI-driven accountability for every construction site
+					</p>
+
+					<div style="font-size:0.9em; color:#94a3b8;">
+						Shivansh Chaturvedi · Anshul Badhani · Rashi Rajput · Akshansh Kumar
+					</div>
+
+				</div>
+			</section>
+
+			<!-- Slide 2: Urban Reality -->
+			<section data-auto-animate>
+				<h2>Urban Reality of Delhi–NCR</h2>
+				<h3>Construction Drives Growth... But Fuels Pollution</h3>
+			</section>
+
+			<section data-auto-animate>
+				<h2 style="opacity:0.3">Urban Reality of Delhi–NCR</h2>
+				<h3>Construction Drives Growth... But Fuels Pollution</h3>
+
+				<ul style="font-size: 0.8em;">
+					<li>Essential for urban expansion (500+ active sites in NCR)</li>
+					<li>Uncontrolled dust emissions:
+						<ul>
+							<li>30–40% of PM10 from construction sites</li>
+							<li>Hyperlocal AQI spikes (up to 400+ near schools/residences)</li>
+							<li>Respiratory cases ↑25% in peak seasons</li>
+						</ul>
+					</li>
+					<li>Current monitoring: City-wide averages only</li>
+					<li><strong>Problem:</strong> No hyperlocal accountability for violations</li>
+				</ul>
+			</section>
+
+			<!-- Slide 3: Why Current Enforcement Fails -->
+			<section>
+				<h2>Why Current Enforcement Fails</h2>
+				<h3><u>Reactive System in a Real-Time World</u></h3>
+				<div style="display: flex; justify-content: space-between;">
+					<div style="flex: 1;">
+						<h4>Current Approach</h4>
+						<ul style="font-size: 0.8em;">
+							<li>Manual inspections (infrequent, biased)</li>
+							<li>Complaint-driven responses</li>
+							<li>Seasonal blanket bans (GRAP Stage III)</li>
+							<li>Broad restrictions (no site targeting)</li>
+						</ul>
+					</div>
+					<div style="flex: 1;">
+						<h4>Key Limitations</h4>
+						<ul style="font-size: 0.8em;">
+							<li>No real-time evidence or alerts</li>
+							<li>Zero predictive spike detection</li>
+							<li>No historical violation tracking</li>
+							<li>Manual penalty decisions (slow, inconsistent)</li>
+						</ul>
+					</div>
+				</div>
+				<p style="margin-top: 0.5em; font-weight: bold; font-size: 0.8em;">Result: Reactive governance →
+					Delayed action,
+					economic losses (₹10Cr+ per ban)</p>
+			</section>
+
+			<!-- Slide 4: Problem Tree -->
+			<section>
+				<h2>Problem Tree</h2>
+				<div style="text-align: left; max-width: 900px; margin: 0 auto;">
+					<p><strong>Root Cause:</strong> Lack of continuous, site-specific monitoring + AI-driven
+						intelligence</p>
+					<p><strong>Core Issue:</strong> Unregulated dust & emission spikes at construction sites
+					</p>
+					<p><strong>Impacts:</strong></p>
+					<ul>
+						<li>AQI deterioration (NCR averages masked by hotspots)</li>
+						<li>Emergency shutdowns & blanket bans</li>
+						<li>Economic losses (project delays, fines)</li>
+						<li>Public health damage (asthma hospitalizations ↑20%)</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Slide 5: CPCB Legal Limits -->
+			<section>
+				<h2>CPCB Legal Limits Integrated</h2>
+				<h3>Enforceable Standards at Our Core</h3>
+				<ul style="list-style: none;">
+					<li>PM2.5: ≤60 µg/m³ (fine particles from combustion)</li>
+					<li>PM10: ≤100 µg/m³ (coarse dust from earthworks)</li>
+					<li>NO₂: ≤80 µg/m³ (diesel exhaust from machinery)</li>
+					<li>CO: ≤2 mg/m³ (engine emissions)</li>
+				</ul>
+				<p style="margin-top: 1.5em; font-style: italic;">Directly from CPCB NAAQS – not arbitrary
+					values</p>
+			</section>
+
+			<!-- Slide 6: Tiered Violation & Fine Logic -->
+			<section>
+				<h2>Tiered Violation & Fine Logic</h2>
+				<h3>Fair, Escalating Enforcement</h3>
+				<div style="display: flex; justify-content: space-around; margin: 1em 0;">
+					<div>
+						<h4>Violation Logic</h4>
+						<ul>
+							<li>1st–2nd: Warning + advisory</li>
+							<li>3rd+: ₹200 fine + audit</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Tampering Logic</h4>
+						<ul>
+							<li>Detection: Accel >10g or data anomalies</li>
+							<li>1st–2nd: Warning + recalibration</li>
+							<li>3rd+: ₹500 fine + suspension</li>
+						</ul>
+					</div>
+				</div>
+				<p><strong>Goal:</strong> Progressive compliance encouragement</p>
+			</section>
+
+			<!-- Slide 7: What We Built -->
+			<section>
+				<h2>Hyperlocal Pollution Intelligence Platform</h2>
+				<ul style="font-size: 1.1em;">
+					<li>Continuous multi-pollutant monitoring</li>
+					<li>Site-specific AQI (size/wind adjusted)</li>
+					<li>Predictive spike forecasting</li>
+					<li>Anomaly & tampering detection</li>
+					<li>Automated mitigation triggers</li>
+					<li>Compliance history & ESG scoring</li>
+				</ul>
+				<p style="margin-top: 1em; font-weight: bold;">From passive data → proactive governance</p>
+			</section>
+
+			<!-- Slide 8: System Architecture -->
+			<section>
+				<h2>System Architecture Overview</h2>
+				<ol style="font-size: 1.1em; text-align: left; max-width: 1000px; margin: 0 auto;">
+					<li><strong>IoT Layer:</strong> Sensors (PM, NO₂, CO, accel) → Edge processing</li>
+					<li><strong>Data Layer:</strong> Cloud DB + real-time stream (Kafka)</li>
+					<li><strong>AI Layer:</strong> LSTM forecasting + Isolation Forest anomalies</li>
+					<li><strong>Compliance Engine:</strong> Thresholds + action rules</li>
+					<li><strong>Output:</strong> Dashboard, alerts, auto-interventions</li>
+				</ol>
+			</section>
+
+			<!-- Slide 9: LSTM Predictive Analytics -->
+			<section>
+				<h2>LSTM Predictive Analytics</h2>
+				<h3>From Reactive to Preventive</h3>
+				<ul>
+					<li><strong>Model:</strong> Long Short-Term Memory (LSTM)</li>
+					<li><strong>Inputs:</strong> Pollutant trends, wind, humidity, activity</li>
+					<li><strong>Output:</strong> 1–2 hour AQI projections</li>
+					<li><strong>Trigger:</strong> Alert if projected AQI >250</li>
+				</ul>
+				<p style="margin-top: 1em;"><strong>Impact:</strong> 30% faster mitigation, fewer bans</p>
+			</section>
+
+			<!-- Slide 10: Isolation Forest -->
+			<section>
+				<h2>Isolation Forest Anomaly Detection</h2>
+				<h3>Smart Fraud & Outlier Resilience</h3>
+				<ul>
+					<li>Unsupervised ML – no labeled fraud data needed</li>
+					<li>Detects: Sensor tampering, impossible drops, evasion tactics</li>
+					<li>Flags statistical outliers in pollution patterns</li>
+					<li>Accuracy: ~95% in simulated tampering scenarios</li>
+				</ul>
+				<p><strong>Benefit:</strong> Adds tamper-proof intelligence layer</p>
+			</section>
+
+			<!-- Slide 11: Corrective Action Engine -->
+			<section>
+				<h2>Corrective Action Engine</h2>
+				<h3>Data → Decisions in Seconds</h3>
+				<ul style="columns: 2; column-gap: 3em;">
+					<li>PM10 >150 → Water cannons</li>
+					<li>PM10 >100 + Wind >5 m/s → Halt earth-moving</li>
+					<li>PM2.5 >60 → Fine-mist sprays</li>
+					<li>NO₂ >100 → Pause diesel engines</li>
+					<li>CO >9 → Critical evacuation alert</li>
+				</ul>
+				<p style="margin-top: 1em; clear: both;"><strong>Context-aware rules for precise
+						operations</strong></p>
+			</section>
+
+			<!-- Slide 12: Auto Water Spray Control -->
+			<section>
+				<h2>Auto Water Spray Control</h2>
+				<h3>Closed-Loop Automation</h3>
+				<ul>
+					<li>AQI >250 (current or projected) → Activate sprinklers</li>
+					<li>AQI <150 + stable → Deactivate (save water)</li>
+					<li>Manual override + tamper protection</li>
+				</ul>
+				<p style="margin-top: 1em;"><strong>Result:</strong> 40–60% dust reduction in controlled
+					tests</p>
+			</section>
+
+			<!-- Slide 13: Role-Based Access -->
+			<section>
+				<h2>Role-Based Access Control</h2>
+				<div style="display: flex; justify-content: space-around;">
+					<div style="flex: 1; text-align: left;">
+						<h4>Government Admin</h4>
+						<ul>
+							<li>Multi-site view</li>
+							<li>Violation trends & heatmaps</li>
+							<li>ESG rankings + logs</li>
+						</ul>
+					</div>
+					<div style="flex: 1; text-align: left;">
+						<h4>Site User / Developer</h4>
+						<ul>
+							<li>Own site only</li>
+							<li>Real-time alerts</li>
+							<li>Compliance score & recommendations</li>
+						</ul>
+					</div>
+				</div>
+				<p style="margin-top: 1.5em;">Secure (JWT), transparent, audit-ready</p>
+			</section>
+
+			<!-- Slide 14: Interactive Delhi Map -->
+			<section>
+				<h2>Interactive Delhi Map</h2>
+				<ul style="font-size: 1.1em;">
+					<li>Sensor locations across NCR sites</li>
+					<li>Color-coded AQI rings (green → red)</li>
+					<li>Wind vectors + humidity overlay</li>
+					<li>Tamper & anomaly markers</li>
+					<li>Zoom, pan, click for site details</li>
+				</ul>
+				<p><strong>Visual command center for regulators</strong></p>
+			</section>
+
+			<!-- Slide 15: Real-Time Dashboard -->
+			<section>
+				<h2>Real-Time Dashboard</h2>
+				<ul>
+					<li>Live AQI scrolling graph (24h)</li>
+					<li>Pollutant bars vs CPCB limits</li>
+					<li>Risk score (0–100) + anomaly flags</li>
+					<li>Mitigation status (e.g. "Sprays: Active")</li>
+					<li>Instant push alerts on thresholds</li>
+				</ul>
+			</section>
+
+			<!-- Slide 16: ESG Scoring -->
+			<section>
+				<h2>ESG & Sustainability Scoring</h2>
+				<ul>
+					<li>Avg AQI impact (40%)</li>
+					<li>Violation & tamper count (30%)</li>
+					<li>Anomaly detections (20%)</li>
+					<li>Mitigation response time (10%)</li>
+				</ul>
+				<p style="margin-top: 1em;">
+					<strong>Output:</strong> 0–100 score | A–D grade | Leaderboard | Audit reports
+				</p>
+				<p><strong>Value:</strong> Developer ESG reporting + regulatory benchmarking</p>
+			</section>
+
+			<!-- Slide 17: Data Simulation Engine -->
+			<section>
+				<h2>Data Simulation Engine</h2>
+				<h3>Cost-Effective AI Validation</h3>
+				<ul>
+					<li>Rush-hour PM spikes</li>
+					<li>Seasonal & wind dispersion</li>
+					<li>Humidity influence</li>
+					<li>Random anomalies + tampering injection</li>
+					<li>Mitigation effect simulation</li>
+				</ul>
+				<p><strong>Benefit:</strong> 5000+ synthetic datasets → robust model training without
+					hardware</p>
+			</section>
+
+			<!-- Slide 18: Target Users -->
+			<section>
+				<h2>Target Users</h2>
+				<ul style="font-size: 1.2em; list-style: none;">
+					<li>CPCB & State Pollution Control Boards</li>
+					<li>Municipal Corporations</li>
+					<li>Smart City Missions (NCR)</li>
+					<li>Large real-estate developers</li>
+				</ul>
+				<p style="margin-top: 1em;">Pilot target: 500+ sites in Delhi-NCR</p>
+			</section>
+
+			<!-- Slide 19: Revenue Model -->
+			<section>
+				<h2>Revenue Model</h2>
+				<ul>
+					<li>SaaS subscription: ₹5,000 / site / month</li>
+					<li>ESG analytics add-on: ₹2,000 / site</li>
+					<li>Custom integrations (GRAP API, etc.)</li>
+					<li>Government enforcement licensing</li>
+				</ul>
+				<p style="margin-top: 1em;">Break-even ~100 sites | 5× ROI projected Year 2</p>
+			</section>
+
+			<!-- Slide 20: Impact Metrics -->
+			<section>
+				<h2>Impact Metrics (Projected)</h2>
+				<ul style="font-size: 1.2em;">
+					<li>20–30% reduction in dust spikes</li>
+					<li>50% faster enforcement response</li>
+					<li>Fewer blanket bans (targeted actions)</li>
+					<li>Violation tracking → 40% better compliance</li>
+				</ul>
+				<p style="margin-top: 1em;">Healthier NCR + ₹50Cr+ annual economic savings</p>
+			</section>
+
+			<!-- Slide 21: Scaling Vision -->
+			<section>
+				<h2>Scaling Vision</h2>
+				<ul style="font-size: 1.1em;">
+					<li><strong>Phase 1 (6 mo):</strong> Delhi-NCR pilot (50 sites)</li>
+					<li><strong>Phase 2 (Year 1):</strong> GIS heatmaps + city model</li>
+					<li><strong>Phase 3 (Year 2):</strong> Multi-city (Mumbai, Bangalore...)</li>
+					<li><strong>Phase 4 (Year 3+):</strong> National predictive compliance network</li>
+				</ul>
+				<p style="margin-top: 1em;">Milestone: 80% live prediction accuracy</p>
+			</section>
+
+			<!-- Slide 22: Closing -->
+			<section>
+				<h1 style="font-size: 3em;">Beyond Monitoring</h1>
+				<h2 style="margin: 0 0;">Predictive Environmental Governance</h2>
+				<p style="margin: 1em 0;">
+					Our project turns data into destiny —<br>
+					preventing pollution before it pollutes.
+				</p>
+				<p style="font-size: 1.2em;">
+					<strong>Let’s pilot a cleaner NCR together.</strong>
+				</p>
+			</section>
+
+			<section>
+				<section>
+					<h2>Project Showcase</h2>
+					<img src="assets/login.png" alt="login" height="500px" width="375px">
+				</section>
+				<section>
+					<h2>Project Showcase</h2>
+					<img src="assets/site_map.png" alt="site map">
+				</section>
+				<section style="padding-top: 1px;">
+					<h2>Project Showcase</h2>
+					<img src="assets/dash_board1.png" alt="dash1" style="margin: 0 0;">
+					<img src="assets/dash_board2.png" alt="dash2" style="margin: 0 0;">
+				</section>
+				<section>
+					<h2>Project Showcase</h2>
+					<img src="assets/live_aqi.png" alt="live aqi trend">
+				</section>
+				<section>
+					<h2>Project Showcase</h2>
+					<img src="assets/esg_report.png" alt="ESG Report">
+				</section>
+				<section>
+					<h2>Project Showcase</h2>
+					<img src="assets/alert.png" alt="ALert">
+				</section>
+				<section>
+					<h2>Project Showcase</h2>
+					<img src="assets/prediction.png" alt="Prediction">
+				</section>
+			</section>
+
+			<section>
+				<h1 class="r-fit-text">THANK YOU!</h1>
+			</section>
+
+			<script src="dist/reveal.js"></script>
+			<script src="plugin/notes/notes.js"></script>
+			<script src="plugin/markdown/markdown.js"></script>
+			<script src="plugin/highlight/highlight.js"></script>
+			<script>
+				// More info about initialization & config:
+				// - https://revealjs.com/initialization/
+				// - https://revealjs.com/config/
+				Reveal.initialize({
+					hash: true,
+
+					// Learn about plugins: https://revealjs.com/plugins/
+					plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+				});
+			</script>
+</body>
+
 </html>
